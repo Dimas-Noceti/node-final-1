@@ -1,0 +1,22 @@
+<div>
+    <h1>Productos</h1>
+
+    <a href="/crearProducto">Crear producto</a>
+    <br>
+    <a href="/product">Administrar productos</a>
+    <br>
+
+    {{#if info.hasPrevPage}}
+        <p>Link a página previa: {{info.prevPage}}</p>
+    {{/if}}
+        <p>Info página actual: {{info.page}}</p>
+    {{#if info.hasNextPage}}
+        <p>Link a página siguiente: {{info.nextPage}}</p>
+    {{/if}}
+
+    {{#each info.docs}}
+    <div>
+        <p>{{this.cod}}, {{this.nombre}}</p>
+    </div>
+    {{/each}}
+</div>
